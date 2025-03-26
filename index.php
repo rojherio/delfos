@@ -1,4 +1,5 @@
 <?php
+// teste
 ob_start();
 session_start();
 // URL AMIGAVEL E CONEXAO BY CONFIG 
