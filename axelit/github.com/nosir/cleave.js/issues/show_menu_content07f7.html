@@ -1,0 +1,117 @@
+<project-picker>
+  <virtual-filter-input
+      class="breadcrumb TableObject SelectMenu-filter p-0 border-bottom-0 d-block"
+      style="margin: 10px 10px 0"
+      aria-owns="project-picker-results"
+      data-property="projects"
+      data-target="project-picker.input"
+      data-action="
+        loadstart:project-picker#willLoad
+        loadend:project-picker#didLoad
+        error:project-picker#didError
+      "
+      src="../projects/issues/projects_suggestionsd2c8.json?access_level=read&amp;scope=user&amp;search_query=is%3Aopen+is%3Aissue"
+      loading="eager">
+      <input type="text" name="query" class="SelectMenu-input form-control" autofocus placeholder="Filter projects" aria-label="Filter projects" autocomplete="off">
+  </virtual-filter-input>
+
+  <tab-container class="d-flex flex-column" data-action="tab-container-changed:project-picker#changeTab">
+    <div data-action="keydown:project-picker#focusInputAndAppendKeyValue" tabindex="-1" class="width-full">
+      <nav class="SelectMenu-tabs" role="tablist" aria-label="Project type">
+          <button type="button" role="tab" class="SelectMenu-tab" aria-selected="true">User</button>
+      </nav>
+
+        <div data-src="/nosir/cleave.js/projects/issues/projects_suggestions?access_level=read&amp;scope=user&amp;search_query=is%3Aopen+is%3Aissue" role="tabpanel" hidden tabindex="-1"></div>
+
+      <virtual-list
+        id="project-picker-results"
+        style="max-height: 300px;"
+        tabindex="0"
+        class="d-block SelectMenu-list overflow-y-auto"
+        data-target="project-picker.list"
+        data-action="
+          virtual-list-update:project-picker#willRenderItems
+          virtual-list-render-item:project-picker#renderItem
+        "
+        data-close-action=""
+        data-search-query="is:open is:issue"
+      >
+
+        <template data-target="project-picker.itemTemplate">
+          <li role="presentation">
+            <label
+              id="pp-{{ id }}"
+              class="SelectMenu-item text-normal"
+              title="{{ name }}"
+              aria-checked="{{ selected }}"
+              role="menuitemcheckbox"
+              tabindex="-1"
+              data-project-id="{{ id }}"
+              data-project-search-slug="{{ search_slug }}"
+              data-project-type="{{ type }}"
+              data-scrolltop
+              aria-setsize
+              aria-posinset
+            >
+              <input type="checkbox" checked="{{ selected }}" hidden>
+              <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check SelectMenu-icon SelectMenu-icon--check">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+              <div class="overflow-hidden">
+                <div class="d-flex Truncate">
+                  <div hidden="{{ table_icon_hidden }}">
+                    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-table color-fg-muted mr-2">
+    <path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0 1 14.25 16H1.75A1.75 1.75 0 0 1 0 14.25ZM6.5 6.5v8h7.75a.25.25 0 0 0 .25-.25V6.5Zm8-1.5V1.75a.25.25 0 0 0-.25-.25H6.5V5Zm-13 1.5v7.75c0 .138.112.25.25.25H5v-8ZM5 5V1.5H1.75a.25.25 0 0 0-.25.25V5Z"></path>
+</svg>
+                  </div>
+                  <div hidden="{{ template_icon_hidden }}">
+                    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-project-template color-fg-muted mr-2">
+    <path d="M1.5 1.75v1.562a.75.75 0 1 1-1.5 0V1.75C0 .784.784 0 1.75 0h1.562a.75.75 0 1 1 0 1.5H1.75a.25.25 0 0 0-.25.25ZM6.438 0h3.124a.75.75 0 1 1 0 1.5H6.438a.75.75 0 1 1 0-1.5Zm6.25 0h1.562C15.217 0 16 .784 16 1.75v1.562a.75.75 0 1 1-1.5 0V1.75a.25.25 0 0 0-.25-.25h-1.562a.75.75 0 1 1 0-1.5ZM1.5 6.438v3.124a.75.75 0 1 1-1.5 0V6.438a.75.75 0 1 1 1.5 0Zm14.5 0v3.124a.75.75 0 1 1-1.5 0V6.438a.75.75 0 1 1 1.5 0Zm-14.5 6.25v1.562c0 .138.112.25.25.25h1.562a.75.75 0 1 1 0 1.5H1.75A1.75 1.75 0 0 1 0 14.25v-1.562a.75.75 0 1 1 1.5 0Zm14.5 0v1.562A1.75 1.75 0 0 1 14.25 16h-1.562a.75.75 0 1 1 0-1.5h1.562a.25.25 0 0 0 .25-.25v-1.562a.75.75 0 1 1 1.5 0ZM6.438 14.5h3.124a.75.75 0 1 1 0 1.5H6.438a.75.75 0 1 1 0-1.5ZM6.5 3v1A.75.75 0 0 1 5 4V3a.75.75 0 0 1 1.5 0ZM2.25 5.75A.75.75 0 0 1 3 5h1a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75Zm4.5 0A.75.75 0 0 1 7.5 5h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75Zm-1 1a.75.75 0 0 1 .75.75v1a.75.75 0 0 1-1.5 0v-1a.75.75 0 0 1 .75-.75Zm.75 4v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0Zm3.5-5a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path>
+</svg>
+                  </div>
+                  <div hidden="{{ project_icon_hidden }}">
+                    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-project color-fg-muted mr-2">
+    <path d="M1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0 1 14.25 16H1.75A1.75 1.75 0 0 1 0 14.25V1.75C0 .784.784 0 1.75 0ZM1.5 1.75v12.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V1.75a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25ZM11.75 3a.75.75 0 0 1 .75.75v7.5a.75.75 0 0 1-1.5 0v-7.5a.75.75 0 0 1 .75-.75Zm-8.25.75a.75.75 0 0 1 1.5 0v5.5a.75.75 0 0 1-1.5 0ZM8 3a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 8 3Z"></path>
+</svg>
+                  </div>
+                  <span class="Truncate-text {{ project_selection_dimmed_text_class }}"><strong>{{ name }}</strong></span>
+                </div>
+                <div class="mt-1 description {{ project_selection_dimmed_text_class }}">
+                  {{ owner }}
+                </div>
+                <div hidden="{{ project_maximum_items_warning_hidden }}" class="color-fg-danger mt-1">Maximum number of items reached. To add more, please archive or delete existing items from the project.</div>
+              </div>
+            </label>
+          </li>
+        </template>
+
+        <div class="SelectMenu-blankslate color-fg-muted p-2" data-target="project-picker.blankslate" hidden>No projects</div>
+
+        <div class="SelectMenu-blankslate color-fg-danger p-2" data-target="project-picker.errorNotice" hidden>Something went wrong. Please try refreshing the page.</div>
+
+        <span data-target="project-picker.loadingIndicator" data-view-component="true">
+  <svg aria-label="Loading projects" style="box-sizing: content-box; color: var(--color-icon-primary);" width="32" height="32" viewBox="0 0 16 16" fill="none" role="img" data-view-component="true" class="my-4 mx-auto d-block anim-rotate">
+    <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-opacity="0.25" stroke-width="2" vector-effect="non-scaling-stroke" fill="none" />
+    <path d="M15 8a7.002 7.002 0 00-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+</svg></span>
+
+        <ul
+          role="listbox"
+          class="list-style-none m-0"
+          aria-label="Filtered projects"
+          data-pjax="#repo-content-pjax-container"
+          data-turbo-frame="repo-content-turbo-frame"
+          data-action="click:project-picker#filterByProject"
+        ></ul>
+      </virtual-list>
+    </div>
+  </tab-container>
+
+  <template data-target="project-picker.selectionTemplate">
+        <input type="{{ type }}" hidden name="{{ name }}" checked="{{ checked }}">
+  </template>
+
+  <div hidden data-target="project-picker.submitContainer">
+  </div>
+</project-picker>
+

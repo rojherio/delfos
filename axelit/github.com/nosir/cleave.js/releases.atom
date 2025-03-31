@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:https://github.com/nosir/cleave.js/releases</id>
+  <link type="text/html" rel="alternate" href="https://github.com/nosir/cleave.js/releases"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/nosir/cleave.js/releases.atom"/>
+  <title>Release notes from cleave.js</title>
+  <updated>2020-05-19T10:48:19Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Repository/59114705/v1.6.0</id>
+    <updated>2020-05-19T10:52:26Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/nosir/cleave.js/releases/tag/v1.6.0"/>
+    <title>Fix mobile keyboard issue and noImmediatePrefix broken issue</title>
+    <content type="html">&lt;p&gt;&lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;617101702&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/nosir/cleave.js/issues/588&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/nosir/cleave.js/pull/588/hovercard&quot; href=&quot;https://github.com/nosir/cleave.js/pull/588&quot;&gt;#588&lt;/a&gt;&lt;br&gt;
+&lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;606107713&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/nosir/cleave.js/issues/582&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/nosir/cleave.js/pull/582/hovercard&quot; href=&quot;https://github.com/nosir/cleave.js/pull/582&quot;&gt;#582&lt;/a&gt;&lt;br&gt;
+&lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;601631839&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/nosir/cleave.js/issues/578&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/nosir/cleave.js/pull/578/hovercard&quot; href=&quot;https://github.com/nosir/cleave.js/pull/578&quot;&gt;#578&lt;/a&gt;&lt;/p&gt;</content>
+    <author>
+      <name>nosir</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/352617?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/59114705/v1.5.10</id>
+    <updated>2020-04-08T11:04:35Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/nosir/cleave.js/releases/tag/v1.5.10"/>
+    <title>Trigger prefix onFocus when noImmediatePrefix is passed in</title>
+    <content type="html">&lt;p&gt;&lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;357615718&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/nosir/cleave.js/issues/399&quot; data-hovercard-type=&quot;issue&quot; data-hovercard-url=&quot;/nosir/cleave.js/issues/399/hovercard&quot; href=&quot;https://github.com/nosir/cleave.js/issues/399&quot;&gt;#399&lt;/a&gt;&lt;/p&gt;</content>
+    <author>
+      <name>nosir</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/352617?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/59114705/v1.5.9</id>
+    <updated>2020-04-01T10:21:54Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/nosir/cleave.js/releases/tag/v1.5.9"/>
+    <title>Add swapHiddenInput option to enable a hidden input holding raw value</title>
+    <content type="html">&lt;p&gt;&lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;357089658&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/nosir/cleave.js/issues/397&quot; data-hovercard-type=&quot;issue&quot; data-hovercard-url=&quot;/nosir/cleave.js/issues/397/hovercard&quot; href=&quot;https://github.com/nosir/cleave.js/issues/397&quot;&gt;#397&lt;/a&gt;&lt;/p&gt;</content>
+    <author>
+      <name>nosir</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/352617?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/59114705/v1.5.8</id>
+    <updated>2020-03-12T11:31:29Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/nosir/cleave.js/releases/tag/v1.5.8"/>
+    <title>Fix on focus one character value prefix issue</title>
+    <content type="html">&lt;p&gt;&lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;329257980&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/nosir/cleave.js/issues/363&quot; data-hovercard-type=&quot;issue&quot; data-hovercard-url=&quot;/nosir/cleave.js/issues/363/hovercard&quot; href=&quot;https://github.com/nosir/cleave.js/issues/363&quot;&gt;#363&lt;/a&gt;&lt;/p&gt;</content>
+    <author>
+      <name>nosir</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/352617?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/59114705/v1.5.7</id>
+    <updated>2020-03-07T06:27:52Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/nosir/cleave.js/releases/tag/v1.5.7"/>
+    <title>Fix signBeforePrefix issue in get prefix function</title>
+    <content type="html">&lt;p&gt;&lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;509078365&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/nosir/cleave.js/issues/525&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/nosir/cleave.js/pull/525/hovercard&quot; href=&quot;https://github.com/nosir/cleave.js/pull/525&quot;&gt;#525&lt;/a&gt;&lt;/p&gt;</content>
+    <author>
+      <name>nosir</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/352617?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/59114705/v1.5.6</id>
+    <updated>2020-03-04T10:50:54Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/nosir/cleave.js/releases/tag/v1.5.6"/>
+    <title>Fix crashes with React default value prop passing in</title>
+    <content type="html">&lt;p&gt;&lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;574366985&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/nosir/cleave.js/issues/568&quot; data-hovercard-type=&quot;issue&quot; data-hovercard-url=&quot;/nosir/cleave.js/issues/568/hovercard&quot; href=&quot;https://github.com/nosir/cleave.js/issues/568&quot;&gt;#568&lt;/a&gt;&lt;br&gt;
+&lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;575161481&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/nosir/cleave.js/issues/570&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/nosir/cleave.js/pull/570/hovercard&quot; href=&quot;https://github.com/nosir/cleave.js/pull/570&quot;&gt;#570&lt;/a&gt;&lt;/p&gt;</content>
+    <author>
+      <name>nosir</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/352617?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/59114705/v1.5.5</id>
+    <updated>2020-03-03T12:05:13Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/nosir/cleave.js/releases/tag/v1.5.5"/>
+    <title>Add tailPrefix (postfix) option for numeral</title>
+    <content type="html">&lt;p&gt;&lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;464886509&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/nosir/cleave.js/issues/489&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/nosir/cleave.js/pull/489/hovercard&quot; href=&quot;https://github.com/nosir/cleave.js/pull/489&quot;&gt;#489&lt;/a&gt;&lt;/p&gt;</content>
+    <author>
+      <name>nosir</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/352617?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/59114705/v1.5.4</id>
+    <updated>2020-02-29T02:52:57Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/nosir/cleave.js/releases/tag/v1.5.4"/>
+    <title>Fixes and PR</title>
+    <content type="html">&lt;p&gt;&lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;481220135&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/nosir/cleave.js/issues/504&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/nosir/cleave.js/pull/504/hovercard&quot; href=&quot;https://github.com/nosir/cleave.js/pull/504&quot;&gt;#504&lt;/a&gt; Add UnionPay 8-series bin support&lt;br&gt;
+&lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;490332268&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/nosir/cleave.js/issues/511&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/nosir/cleave.js/pull/511/hovercard&quot; href=&quot;https://github.com/nosir/cleave.js/pull/511&quot;&gt;#511&lt;/a&gt; Pass the name of the input in the event&lt;br&gt;
+&lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;512534034&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/nosir/cleave.js/issues/527&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/nosir/cleave.js/pull/527/hovercard&quot; href=&quot;https://github.com/nosir/cleave.js/pull/527&quot;&gt;#527&lt;/a&gt; &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;487924802&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/nosir/cleave.js/issues/510&quot; data-hovercard-type=&quot;issue&quot; data-hovercard-url=&quot;/nosir/cleave.js/issues/510/hovercard&quot; href=&quot;https://github.com/nosir/cleave.js/issues/510&quot;&gt;#510&lt;/a&gt; Remove componentWillReceiveProps usage for concurrent mode&lt;br&gt;
+&lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;361730443&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/nosir/cleave.js/issues/400&quot; data-hovercard-type=&quot;issue&quot; data-hovercard-url=&quot;/nosir/cleave.js/issues/400/hovercard&quot; href=&quot;https://github.com/nosir/cleave.js/issues/400&quot;&gt;#400&lt;/a&gt;  &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;502295400&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/nosir/cleave.js/issues/518&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/nosir/cleave.js/pull/518/hovercard&quot; href=&quot;https://github.com/nosir/cleave.js/pull/518&quot;&gt;#518&lt;/a&gt; Add null check when updating value&lt;/p&gt;</content>
+    <author>
+      <name>nosir</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/352617?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/59114705/v1.5.3</id>
+    <updated>2019-07-15T12:50:49Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/nosir/cleave.js/releases/tag/v1.5.3"/>
+    <title>Fix noImmediatePrefix broken issue</title>
+    <content type="html">&lt;p&gt;&lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;426549038&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/nosir/cleave.js/issues/455&quot; data-hovercard-type=&quot;issue&quot; data-hovercard-url=&quot;/nosir/cleave.js/issues/455/hovercard&quot; href=&quot;https://github.com/nosir/cleave.js/issues/455&quot;&gt;#455&lt;/a&gt;&lt;/p&gt;</content>
+    <author>
+      <name>nosir</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/352617?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/59114705/v1.5.2</id>
+    <updated>2019-06-29T13:49:16Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/nosir/cleave.js/releases/tag/v1.5.2"/>
+    <title>Fix react component event register issue</title>
+    <content type="html">&lt;p&gt;Fix js issue introduced by PR &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;449001339&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/nosir/cleave.js/issues/479&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/nosir/cleave.js/pull/479/hovercard&quot; href=&quot;https://github.com/nosir/cleave.js/pull/479&quot;&gt;#479&lt;/a&gt;&lt;/p&gt;</content>
+    <author>
+      <name>nosir</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/352617?s=60&amp;v=4"/>
+  </entry>
+</feed>
