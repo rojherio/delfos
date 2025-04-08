@@ -10,7 +10,7 @@ $db = Conexao::getInstance();
 // FUNCOES
 include_once "conf/session.php";
 include_once "assets/utils/funcoes.php";
-include_once ('assets/utils/permissoes.php');
+include_once 'assets/utils/permissoes.php';
 // INSTANCIA A CONEXAO
 $mvc = Url::getURL(0);
 $modulo = Url::getURL(1);
