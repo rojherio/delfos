@@ -17662,31 +17662,14 @@ body[style="overflow: hidden; padding-right: 17px;"] .app-wrapper nav.horizontal
   transition: var(--app-transition);
 }
 
-/*nav {
+nav {
   width: 17rem;
   height: 100vh;
   display: inline-block;
   position: fixed;
   background-color: rgba(var(--white), 1);
   z-index: 1003;
-}*/
-nav {
-/*  width: 17rem;*/
-/*  height: 100vh;*/
-  display: inline-block;
-  position: fixed;
-  background-color: rgba(var(--white), 1);
-  z-index: 1003;
 }
-nav .vertical-sidebar {
-  width: auto;
-  height: auto;
-  display: inline-block;
-  position: fixed;
-  background-color: rgba(var(--white), 1);
-  z-index: 1003;
-}
-
 nav .app-logo {
   padding: 1.5rem 1.5rem 0 1.5rem;
 }
