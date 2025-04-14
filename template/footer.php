@@ -1,4 +1,3 @@
-</div>
 <!-- tap on top -->
 <div class="go-top">
   <span class="progress-value">
@@ -8,7 +7,7 @@
 
 <!-- footer -->
 <!-- Footer Section starts-->
-<footer>
+<!-- <footer>
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-9 col-12">
@@ -27,7 +26,7 @@
       </div>
     </div>
   </div>
-</footer>
+</footer> -->
 <!-- Footer Section ends-->
 
 </div>
