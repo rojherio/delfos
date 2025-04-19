@@ -59,7 +59,7 @@ $rsUnidadeOrganizaionalTipo = $stmt->fetchAll(PDO::FETCH_ASSOC);
               <div class="row">
                 <div class="col-12">
                   <div class="form-floating mb-3">
-                    <select class="form-control select-example form-select select-basic" id="secretaria" name="secretaria" aria-label="Selecione uma secretaria">>
+                    <select class="select_modelo form-control select-example form-select select-basic" id="secretaria" name="secretaria" aria-label="Selecione uma secretaria">>
                       <option value="AL">Alabama</option>
                       <option value="AL">Wyoming</option>
                       <option value="WY">Coming</option>

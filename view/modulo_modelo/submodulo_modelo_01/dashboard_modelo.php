@@ -2,42 +2,48 @@
 include_once ('template/topo.php');
 include_once ('template/sidebar.php');
 include_once ('template/header.php');
+$id = !(isset($_POST['id'])) ? 0 : $_POST['id'];
 $db = Conexao::getInstance();
 //Consulta para Edição - BEGIN
-// $stmt = $db->prepare("SELECT 
-//   uot.id AS id, 
-//   uot.nome AS nome, 
-//   uot.status AS status, 
-//   uo.bsc_unidade_organizacional_tipo_id AS id_tipo
-//   FROM bsc_unidade_organizacional_tipo AS uot 
-//   LEFT JOIN bsc_unidade_organizacional AS uo ON uot.id = uo.bsc_unidade_organizacional_tipo_id
-//   GROUP BY uot.id 
-//   ORDER BY uot.nome ASC;");
-// $stmt->execute();
-// $rsUnidadeOrganizaionalTipo = $stmt->fetchAll(PDO::FETCH_ASSOC);
-//Consulta para Edição - END
-//Consulta para Select - BEGIN
-$stmt = $db->prepare("SELECT 
-  uot.id AS id, 
-  uot.nome AS nome
-  FROM bsc_unidade_organizacional_tipo AS uot 
-  WHERE uot.status = 1  
-  ORDER BY uot.nome ASC;");
-$stmt->execute();
-$rsUOTipos = $stmt->fetchAll(PDO::FETCH_ASSOC);
-//Consulta para Select - END
-//Consulta para DataTable - BEGIN
 $stmt = $db->prepare("SELECT 
   uot.id AS id, 
   uot.nome AS nome, 
-  uot.status AS status, 
-  uo.bsc_unidade_organizacional_tipo_id AS id_tipo
+  uot.status AS status 
   FROM bsc_unidade_organizacional_tipo AS uot 
-  LEFT JOIN bsc_unidade_organizacional AS uo ON uot.id = uo.bsc_unidade_organizacional_tipo_id
-  GROUP BY uot.id 
-  ORDER BY uot.nome ASC;");
+  WHERE uot.id = ? ;");
+$stmt->bindValue(1, $id);
 $stmt->execute();
-$rsUnidadeOrganizaionalTipos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$rsUOTipo = $stmt->fetch(PDO::FETCH_ASSOC);
+//Consulta para Edição - END
+//Consulta para Select - BEGIN
+$stmt = $db->prepare("
+  SELECT 
+  uo.id AS id, 
+  uo.nome AS nome, 
+  uo.status AS status 
+  FROM bsc_unidade_organizacional AS uo 
+  WHERE uo.status = 1 
+  ORDER BY uo.nome ASC;");
+$stmt->execute();
+$rsUOs = $stmt->fetchAll(PDO::FETCH_ASSOC);
+//Consulta para Select - END
+//Consulta para DataTable - BEGIN
+$stmt = $db->prepare("
+  SELECT 
+  uo.id AS id, 
+  uo.numero AS numero, 
+  uo.nome AS nome, 
+  uo.status AS status, 
+  uo.bsc_unidade_organizacional_tipo_id, 
+  uot.nome AS nome_tipo, 
+  sc.bsc_unidade_organizacional_id AS sc_id_uo 
+  FROM bsc_unidade_organizacional AS uo 
+  LEFT JOIN bsc_unidade_organizacional_tipo AS uot ON uot.id = uo.bsc_unidade_organizacional_tipo_id
+  LEFT JOIN rh_servidor_contrato AS sc ON uo.id = sc.bsc_unidade_organizacional_id 
+  GROUP BY uo.id 
+  ORDER BY uo.nome ASC;");
+$stmt->execute();
+$rsUOs2 = $stmt->fetchAll(PDO::FETCH_ASSOC);
 //Consulta para DataTable - END
 ?>
 <!-- main section -->
@@ -79,7 +85,7 @@ $rsUnidadeOrganizaionalTipos = $stmt->fetchAll(PDO::FETCH_ASSOC);
               <div class="row">
                 <div class="col-12">
                   <div class="form-floating mb-3">
-                    <input type="text" class="form-control" minlength="3" id="nome_tipo" name="nome_tipo" placeholder="Digite o nome da instituição" value="" required>
+                    <input type="text" class="form-control" minlength="3" id="nome_tipo" name="nome_tipo" placeholder="Digite o nome da instituição" value="<?= $rsUOTipo['nome']; ?>" required>
                     <label for="nome_tipo">Nome</label>
                   </div>
                 </div>
@@ -89,16 +95,17 @@ $rsUnidadeOrganizaionalTipos = $stmt->fetchAll(PDO::FETCH_ASSOC);
               <div class="row">
                 <div class="col-12">
                   <div class="form-floating mb-3">
-                    <select class="form-control  select_modelo" id="secretaria" name="secretaria" aria-label="Selecione uma secretaria">
+                    <select class="select_modelo form-control form-select select-basic" id="secretaria" name="secretaria" aria-label="Selecione uma secretaria">
+                      <option></option>
                       <?php
-                      foreach ($rsUOTipos as $kObj => $vObj) {
+                      foreach ($rsUOs as $kObj => $vObj) {
                         ?>
                         <option value="<?= $vObj["id"] ;?>"><?= $vObj["nome"] ;?></option>
                         <?php
                       }
                       ?>
                     </select>
-                    <label for="secretaria" class="form-label">Secretaria</label>
+                    <label for="secretaria">Secretaria</label>
                   </div>
                 </div>
               </div>
@@ -108,7 +115,7 @@ $rsUnidadeOrganizaionalTipos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <div class="col-12">
                   <div class="card-body main-switch main-switch-color">
                     <div class="switch-info swich-size">
-                      <input type="checkbox" class="toggle" id="status_tipo" name="status_tipo" value="1">
+                      <input type="checkbox" class="" id="status_tipo" name="status_tipo" checked="true" value="1">
                       <label for="status_tipo">Ativo</label>
                     </div>
                   </div>
@@ -152,20 +159,24 @@ $rsUnidadeOrganizaionalTipos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <thead class="bg-inverse">
                   <tr>
                     <th>#</th>
-                    <th>Nome</th>
-                    <th>Status</th>
+                  <th>Número</th>
+                  <th>Nome</th>
+                  <th>Tipo Secretaria</th>
+                  <th>Status</th>
                     <th class="no-print" width="160px !important"></th>
                   </tr>
                 </thead>
                 <tbody>
                   <?php
-                  foreach ($rsUnidadeOrganizaionalTipos as $kObj => $vObj) {
-                    $excluirDisable = !is_null($vObj['id_tipo']) ? 'negado="true" data-toggle="tooltip" title="Este registro não pode ser exlcuido pois está vinculado a um tipo de secretaria!" onclick="return null;"' : '';
+                  foreach ($rsUOs2 as $kObj => $vObj) {
+                    $excluirDisable = !is_null($vObj['sc_id_uo']) ? 'negado="true" data-toggle="tooltip" title="Este registro não pode ser exlcuido pois está vinculado a um tipo de secretaria!" onclick="return null;"' : '';
                     ?>
                     <tr>
                       <input type="hidden" id="td_id" value="<?= $vObj['id']; ?>">
                       <td id="td_count"><?= $kObj+1; ?></td>
+                      <td id="td_numero"><?= $vObj['numero']; ?></td>
                       <td id="td_nome"><?= $vObj['nome']; ?></td>
+                      <td id="td_tipo_uo" value="<?= $vObj['bsc_unidade_organizacional_tipo_id'];?>"><?= $vObj['nome_tipo']; ?></td>
                       <td id="td_status" value="<?= $vObj['status'];?>"><span class="badge text-light-primary"><?= $vObj['status'] == 1 ? 'Ativo' : 'Inativo'; ?></span></td>
                       <td class="text-center">
                         <button type="button" id="btn_editar_registro" class="btn_editar_registro btn btn-light-warning icon-btn b-r-4" onclick="btnEditar(this);">

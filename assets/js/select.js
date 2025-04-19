@@ -6,9 +6,9 @@ $('.select_modelo').select2({
 // $(function() {
 //   $('.select-1').select2();
 // });
-// $(function() {
-//   $('.select-example').select2();
-// });
+$(function() {
+  $('.select-example').select2();
+});
 // $(function() {
 //   $('.select-example-two').select2();
 // });
